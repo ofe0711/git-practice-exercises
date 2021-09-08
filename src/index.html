@@ -1,0 +1,43 @@
+<h1>Permissions, Redirection, and Piping Exercise.</h1>
+<h2>Part I(Permissions and links)</h2>
+<ol>
+  <li>touch restricted.txt</li>
+  <li>chmod 600 restricted.txt</li>
+  <li>chmod a+rwx rextricted.txt</li>
+  <li>mkdir secret_files</li>
+  <ul>
+  <li>~/desktop/secret_files touch first_secret.txt</li>
+  <li>~/desktop/secret_files mkdir classified</li>
+  <li>~/desktop/secret_files/classified touch suoer_secret.txt</li>
+    </ul>
+  <li>chmod 770 secret_files</li>
+  <li>ln restricted.txt hard_link</li>
+  <li>ln -s classified classified_link</li>
+  
+</ol>
+
+<h2>Part II(Piping and Redirection)</h2>
+<p>touch vegeables.txt</p>
+<p>echo Lettuce > vegetables.txt</p>
+<p>echo Amaranth >> vegetables.txt</p>
+<p>echo Beet >> vegetables.txt</p>
+<p>echo Celery >> vegetables.txt</p>
+<p>echo Kale >> vegetables.txt</p>
+<p>echo Dill >> vegetables.txt</p>
+<p>echo Cabbage >> vegetables.txt</p>
+<p>echo Broccoli >> vegetables.txt</p>
+<p>echo Lettuce >> vegetables.txt</p>
+<p>echo Amaranth >> vegetables.txt</p>
+<p>echo Beet >> vegetables.txt</p>
+<p>echo Spinach >> vegetables.txt</p>
+<p>echo Chard >> vegetables.txt</p>
+<p>echo Broccoli >> vegetables.txt</p>
+<p>echo Cabbage >> vegetables.txt</p>
+<p>echo Dill >> vegetables.txt</p>
+<ol>
+  <li>sort vegetables.txt</li>
+  <li>wc -l vegetables.txt</li>
+  <li>sort <vegetables.txt> vegetables_sorted.txt</li>
+    <li>cat vegetables.txt | sort | tail -n 3 > last_three.txt</li>
+  <li>wc vegetables.txt | grep Broccoli -l </li>
+</ol>
